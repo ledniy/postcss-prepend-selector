@@ -1,0 +1,28 @@
+{
+  "name": "postcss-prepend-selector",
+  "version": "0.0.0",
+  "description": "PostCSS plugin Prepend selector for each rule",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-prepend-selector"
+  ],
+  "author": "Vladislav Gladkiy <ledniy@gmail.com>",
+  "license": "MIT",
+  "repository": "ledniy/postcss-prepend-selector",
+  "bugs": {
+    "url": "https://github.com/ledniy/postcss-prepend-selector/issues"
+  },
+  "homepage": "https://github.com/ledniy/postcss-prepend-selector",
+  "dependencies": {
+    "postcss": "^5.0.10"
+  },
+  "devDependencies": {
+    "ava": "^0.7.0",
+    "eslint": "^1.10.2"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  }
+}
