@@ -10,10 +10,18 @@
 .foo {
     /* Input example */
 }
+
+.foo, .bar {
+    /* Input example */
+}
 ```
 
 ```css
 .selector .foo {
+  /* Output example */
+}
+
+.selector .foo, .selector .bar {
   /* Output example */
 }
 ```
