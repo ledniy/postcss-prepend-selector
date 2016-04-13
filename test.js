@@ -22,3 +22,9 @@ test('Prepend selectors', t => {
         selector: '.selector '
     });
 });
+
+test('Skip keyframe rules', t => {
+    return run(t, '0%, from {} 100%, to {}', '0%, from {} 100%, to {}', {
+        selector: '.selector '
+    });
+});
