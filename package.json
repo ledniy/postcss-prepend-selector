@@ -16,10 +16,10 @@
   },
   "homepage": "https://github.com/ledniy/postcss-prepend-selector",
   "dependencies": {
-    "postcss": "^5.0.10"
+    "postcss": "^5.2.14"
   },
   "devDependencies": {
-    "ava": "^0.7.0",
+    "ava": "^0.18.0",
     "eslint": "^1.10.2"
   },
   "scripts": {
