@@ -9,6 +9,11 @@ module.exports = postcss.plugin('postcss-prepend-selector', function (opts) {
                     // This is part of a keyframe
                     return selector;
                 }
+
+                if (selector.startsWith(opts.selector.trim())) {
+                    return selector;
+                }
+
                 return opts.selector + selector;
             });
         });

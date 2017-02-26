@@ -6,25 +6,25 @@ import plugin from './';
 function run(t, input, output, opts = {}) {
     return postcss([plugin(opts)]).process(input)
         .then(result => {
-            t.same(result.css, output);
-            t.same(result.warnings().length, 0);
+            t.is(result.css, output);
+            t.is(result.warnings().length, 0);
         });
 }
 
-test('Prepend selector', t => {
-    return run(t, 'a{ }', '.selector a{ }', {
-        selector: '.selector '
-    });
-});
+const selector = '.selector ';
 
-test('Prepend selectors', t => {
-    return run(t, 'a, .example{ }', '.selector a, .selector .example{ }', {
-        selector: '.selector '
-    });
-});
+test('Prepend selector', t =>
+  run(t, 'a{ }', '.selector a{ }', { selector })
+);
 
-test('Skip keyframe rules', t => {
-    return run(t, '0%, from {} 100%, to {}', '0%, from {} 100%, to {}', {
-        selector: '.selector '
-    });
-});
+test('Prepend selectors', t =>
+  run(t, 'a, .example{ }', '.selector a, .selector .example{ }', { selector })
+);
+
+test('Should not prepend if class is already there', t =>
+  run(t, '.selector.example{ }', '.selector.example{ }', { selector })
+);
+
+test('Skip keyframe rules', t =>
+  run(t, '0%, from {} 100%, to {}', '0%, from {} 100%, to {}', { selector })
+);
