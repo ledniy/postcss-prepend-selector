@@ -28,3 +28,8 @@ test('Should not prepend if class is already there', t =>
 test('Skip keyframe rules', t =>
   run(t, '0%, from {} 100%, to {}', '0%, from {} 100%, to {}', { selector })
 );
+
+test('Skip numerical values with decimal in keyframes', t =>
+  run(t, '@keyframes name{0%{}.5%{}0.9%{}10.10%{}20.1%{}100%{}}',
+        '@keyframes name{0%{}.5%{}0.9%{}10.10%{}20.1%{}100%{}}', { selector })
+);
