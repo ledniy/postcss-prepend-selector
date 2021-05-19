@@ -1,10 +1,41 @@
 # PostCSS Prepend Selector
 
-[PostCSS] plugin Prepend selector for each rule.
+[PostCSS] plugin Prepend selector for each rule with optional exclude existing selector from prepending.
 
 [PostCSS]: https://github.com/postcss/postcss
 
-## Usage
+## The intention
+
+The intention I had extended the plugin to create a user interface for the web using Vue-js and styled it with Tailwind-css. The Vue-js panel was
+integrated into an existing website/application. So the styles created with Tailwind-css should be used exclusively in the Vue-js application.
+
+## Usage in postcss.config.js with  prepend-selector-postcss
+
+```js
+// postcss.config.js
+const autoprefixer = require('autoprefixer');
+const tailwindcss = require('tailwindcss');
+// https://github.com/ledniy/postcss-prepend-selector
+const prepend = require('prepend-selector-postcss')({
+    // requiured
+    selector: '.myPrefix ',
+    // optional can be omitted
+    exclude: ['.living_classname_to_prevent_from_prefixing '],
+    // optional can be omitted
+    excludePart: ['.grid-']
+})
+module.exports = {
+    purge  : [
+        './public/**/*.html',
+        './src/**/*.{js,jsx,ts,tsx,vue}',
+    ],
+    plugins: [
+        tailwindcss,
+        prepend,
+        autoprefixer,
+    ],
+};
+```
 
 ### Prefix all
 

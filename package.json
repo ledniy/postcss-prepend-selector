@@ -1,6 +1,6 @@
 {
   "name": "prepend-selector-postcss",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "PostCSS plugin Prepend selector for each rule. Optional exclude rules to prevent prepending 2021",
   "keywords": [
     "postcss",

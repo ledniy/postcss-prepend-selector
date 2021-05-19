@@ -1,3 +1,4 @@
+# 0.4.2 (2021-05-19) docu extended with tailwind postcss example
 # 0.4.1 (2021-05-19) renamed to prepend-selector-postcss without npm scope
 # 0.4.0 (2021-05-19)
 
