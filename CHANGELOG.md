@@ -1,3 +1,8 @@
+# 0.4.0 (2021-05-19)
+
+Added: exclude .classnames and #id's
+Added: excludePart for .classnames and #id's start with
+
 # 0.2.0 (2016-01-03)
 
 Added: support for multiple selectors (fix [#1](https://github.com/ledniy/postcss-prepend-selector/issues/1))
