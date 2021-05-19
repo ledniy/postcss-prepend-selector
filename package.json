@@ -1,28 +1,32 @@
 {
-  "name": "postcss-prepend-selector",
-  "version": "0.3.1",
-  "description": "PostCSS plugin Prepend selector for each rule",
+  "name": "@filefabrik/prepend-selector-postcss",
+  "version": "0.4.0",
+  "description": "PostCSS plugin Prepend selector for each rule. Optional exclude rules to prevent prepending 2021",
   "keywords": [
     "postcss",
     "css",
     "postcss-plugin",
-    "postcss-prepend-selector"
+    "prefix exclude selector"
   ],
-  "author": "Vladislav Gladkiy <ledniy@gmail.com>",
+  "author": "exsetnamor <rt@FileFabrik.com>",
   "license": "MIT",
-  "repository": "ledniy/postcss-prepend-selector",
-  "bugs": {
-    "url": "https://github.com/ledniy/postcss-prepend-selector/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filefabrik/prepend-selector-postcss.git"
   },
-  "homepage": "https://github.com/ledniy/postcss-prepend-selector",
+  "bugs": {
+    "url": "https://github.com/filefabrik/prepend-selector-postcss/issues"
+  },
+  "homepage": "https://github.com/filefabrik/prepend-selector-postcss",
   "dependencies": {
     "postcss": "^5.2.14"
   },
   "devDependencies": {
-    "ava": "^0.18.0",
-    "eslint": "^1.10.2"
+    "ava": "^3.15.0",
+    "eslint": "^7.26.0"
   },
   "scripts": {
     "test": "ava && eslint *.js"
-  }
+  },
+  "main": "index.js"
 }
