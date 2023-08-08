@@ -1,3 +1,5 @@
+Up-to-date alternative https://github.com/RadValentin/postcss-prefix-selector
+
 # PostCSS Prepend Selector [![Build Status][ci-img]][ci]
 
 [PostCSS] plugin Prepend selector for each rule.
